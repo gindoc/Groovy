@@ -38,6 +38,7 @@ buildscript {
     dependencies {
         classpath 'cn.edu.zafu.gradle.plugin:time:1.0.0'
         classpath 'com.cwenhui.gradle.plugin:myplugin:1.0.0'
+//        classpath 'com.cwenhui.gradle.plugin:myplugin:1.0.5'
 //        classpath 'com.cwenhui.gradle.plugin:test:1.0.0'
 
     }

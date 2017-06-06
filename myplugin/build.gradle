@@ -10,7 +10,7 @@ repositories {
     mavenCentral()
 }
 group='com.cwenhui.gradle.plugin'
-version='1.0.0'
+version='1.0.5'
 
 uploadArchives {
     repositories {
@@ -19,3 +19,5 @@ uploadArchives {
         }
     }
 }
+
+apply from: '../bintray.gradle'
