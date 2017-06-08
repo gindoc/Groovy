@@ -36,14 +36,43 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'cn.edu.zafu.gradle.plugin:time:1.0.0'
-        classpath 'com.cwenhui.gradle.plugin:myplugin:1.0.0'
+//        classpath 'cn.edu.zafu.gradle.plugin:time:1.0.0'
+//        classpath 'com.cwenhui.gradle.plugin:myplugin:1.0.0'
 //        classpath 'com.cwenhui.gradle.plugin:myplugin:1.0.5'
+        classpath 'com.cwenhui.gradle.plugin:extension:1.0.0'
 //        classpath 'com.cwenhui.gradle.plugin:test:1.0.0'
+    }
+}
+
+//apply plugin: 'plugin.time'
+apply plugin: 'plugin-extension'
+//apply plugin: 'myplugin'
+//apply plugin: 'testf'
+
+pluginExt {
+    param1 = 'app param1'
+    param2 = 'app param2'
+    nestExt {
+        nestParam1='app nestParam1'
+        nestParam2='app nestParam2'
 
     }
 }
 
-apply plugin: 'plugin.time'
-apply plugin: 'myplugin'
-//apply plugin: 'testf'
+//class Greeting extends DefaultTask {
+//    String message
+//    String recipient
+//
+//    @TaskAction
+//    void sayGreeting() {
+//        println "${message}, ${recipient}!"
+//    }
+//}
+//
+//task hello(type: Greeting){
+//    group 'Welcome'
+//    description 'Produces a world greeting'
+//    message 'Hello'
+//    recipient 'World'
+//}
+
